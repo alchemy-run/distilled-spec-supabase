@@ -20751,11 +20751,17 @@
               "REMOVED",
               "FAILED"
             ]
+          },
+          "completed_on": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "required": [
           "name",
-          "status"
+          "status",
+          "completed_on"
         ]
       },
       "V1UndoBody": {
