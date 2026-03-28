@@ -7560,7 +7560,7 @@
             ]
           }
         ],
-        "summary": "[Beta] List applied migration versions",
+        "summary": "List applied migration versions",
         "tags": [
           "Database"
         ],
@@ -7638,7 +7638,7 @@
             ]
           }
         ],
-        "summary": "[Beta] Apply a database migration",
+        "summary": "Apply a database migration",
         "tags": [
           "Database"
         ],
@@ -7716,7 +7716,7 @@
             ]
           }
         ],
-        "summary": "[Beta] Upsert a database migration without applying",
+        "summary": "Upsert a database migration without applying",
         "tags": [
           "Database"
         ],
@@ -7785,7 +7785,7 @@
             ]
           }
         ],
-        "summary": "[Beta] Rollback database migrations and remove them from history table",
+        "summary": "Rollback database migrations and remove them from history table",
         "tags": [
           "Database"
         ],
@@ -7862,7 +7862,7 @@
             ]
           }
         ],
-        "summary": "[Beta] Fetch an existing entry from migration history",
+        "summary": "Fetch an existing entry from migration history",
         "tags": [
           "Database"
         ],
@@ -7940,7 +7940,7 @@
             ]
           }
         ],
-        "summary": "[Beta] Patch an existing entry in migration history",
+        "summary": "Patch an existing entry in migration history",
         "tags": [
           "Database"
         ],
