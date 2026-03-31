@@ -15932,7 +15932,7 @@
             "nullable": true
           },
           "sessions_inactivity_timeout": {
-            "type": "integer",
+            "type": "number",
             "nullable": true
           },
           "sessions_single_per_user": {
@@ -15944,7 +15944,7 @@
             "nullable": true
           },
           "sessions_timebox": {
-            "type": "integer",
+            "type": "number",
             "nullable": true
           },
           "site_url": {
@@ -16573,12 +16573,12 @@
             "nullable": true
           },
           "sessions_timebox": {
-            "type": "integer",
+            "type": "number",
             "minimum": 0,
             "nullable": true
           },
           "sessions_inactivity_timeout": {
-            "type": "integer",
+            "type": "number",
             "minimum": 0,
             "nullable": true
           },
