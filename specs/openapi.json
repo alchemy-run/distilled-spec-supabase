@@ -8286,7 +8286,7 @@
           },
           {
             "fga_permissions": [
-              "database_write"
+              "database_config_write"
             ]
           }
         ],
