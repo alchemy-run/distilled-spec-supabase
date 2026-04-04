@@ -16313,6 +16313,21 @@
             "type": "boolean",
             "nullable": true
           },
+          "passkey_enabled": {
+            "type": "boolean"
+          },
+          "webauthn_rp_display_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "webauthn_rp_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "webauthn_rp_origins": {
+            "type": "string",
+            "nullable": true
+          },
           "mfa_phone_otp_length": {
             "type": "integer"
           },
@@ -16762,6 +16777,10 @@
           "mfa_phone_verify_enabled",
           "mfa_web_authn_enroll_enabled",
           "mfa_web_authn_verify_enabled",
+          "passkey_enabled",
+          "webauthn_rp_display_name",
+          "webauthn_rp_id",
+          "webauthn_rp_origins",
           "mfa_phone_otp_length",
           "mfa_phone_template",
           "mfa_phone_max_frequency",
@@ -17769,6 +17788,21 @@
           },
           "mfa_web_authn_verify_enabled": {
             "type": "boolean",
+            "nullable": true
+          },
+          "passkey_enabled": {
+            "type": "boolean"
+          },
+          "webauthn_rp_display_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "webauthn_rp_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "webauthn_rp_origins": {
+            "type": "string",
             "nullable": true
           },
           "mfa_phone_enroll_enabled": {
