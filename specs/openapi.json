@@ -693,6 +693,15 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
           }
         },
         "security": [
@@ -743,6 +752,15 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
           }
         },
         "security": [
@@ -888,6 +906,15 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
+          },
           "500": {
             "description": "Unexpected error listing organizations"
           }
@@ -940,6 +967,15 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
           },
           "500": {
             "description": "Unexpected error creating an organization"
@@ -1271,6 +1307,15 @@
         "responses": {
           "204": {
             "description": ""
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
           }
         },
         "security": [
@@ -1364,6 +1409,15 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
+          },
           "500": {
             "description": "Failed to list user's SQL snippets"
           }
@@ -1419,6 +1473,15 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
           },
           "500": {
             "description": "Failed to retrieve SQL snippet"
@@ -2502,15 +2565,6 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden action"
-          },
-          "429": {
-            "description": "Rate limit exceeded"
-          },
           "500": {
             "description": "Failed to retrieve database branches"
           }
@@ -2583,15 +2637,6 @@
                 }
               }
             }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden action"
-          },
-          "429": {
-            "description": "Rate limit exceeded"
           },
           "500": {
             "description": "Failed to create database branch"
@@ -2726,15 +2771,6 @@
                 }
               }
             }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden action"
-          },
-          "429": {
-            "description": "Rate limit exceeded"
           },
           "500": {
             "description": "Failed to fetch database branch"
@@ -11840,6 +11876,15 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
           },
           "500": {
             "description": "Failed to retrieve projects"
