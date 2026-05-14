@@ -2890,6 +2890,16 @@
               "example": "abcdefghijklmnopqrst",
               "type": "string"
             }
+          },
+          {
+            "name": "remove_addon",
+            "required": false,
+            "in": "query",
+            "description": "If true, also removes the custom domain add-on from the project subscription.",
+            "schema": {
+              "default": "false",
+              "type": "boolean"
+            }
           }
         ],
         "responses": {
