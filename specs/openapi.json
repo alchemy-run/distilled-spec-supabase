@@ -14949,6 +14949,20 @@
                     "type",
                     "slot_name"
                   ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "x86_architecture"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "type"
+                  ]
                 }
               ]
             }
