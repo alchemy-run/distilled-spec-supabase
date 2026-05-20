@@ -12221,7 +12221,9 @@
               "MIGRATIONS_FAILED",
               "FUNCTIONS_DEPLOYED",
               "FUNCTIONS_FAILED"
-            ]
+            ],
+            "description": "This field is deprecated. List action runs to get branch status instead.",
+            "deprecated": true
           },
           "created_at": {
             "type": "string",
@@ -21694,6 +21696,7 @@
                         "ipv4",
                         "pitr.available_variants",
                         "log_drains",
+                        "audit_log_drains",
                         "branching_limit",
                         "branching_persistent",
                         "auth.mfa_phone",
