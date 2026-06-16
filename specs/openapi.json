@@ -18310,7 +18310,8 @@
                     "ipv4",
                     "auth_mfa_phone",
                     "auth_mfa_web_authn",
-                    "log_drain"
+                    "log_drain",
+                    "etl_pipeline"
                   ]
                 },
                 "variant": {
@@ -18377,6 +18378,12 @@
                           "type": "string",
                           "enum": [
                             "log_drain_default"
+                          ]
+                        },
+                        {
+                          "type": "string",
+                          "enum": [
+                            "etl_pipeline_default"
                           ]
                         }
                       ]
@@ -18446,7 +18453,8 @@
                     "ipv4",
                     "auth_mfa_phone",
                     "auth_mfa_web_authn",
-                    "log_drain"
+                    "log_drain",
+                    "etl_pipeline"
                   ]
                 },
                 "name": {
@@ -18518,6 +18526,12 @@
                             "type": "string",
                             "enum": [
                               "log_drain_default"
+                            ]
+                          },
+                          {
+                            "type": "string",
+                            "enum": [
+                              "etl_pipeline_default"
                             ]
                           }
                         ]
@@ -18640,7 +18654,8 @@
               "ipv4",
               "auth_mfa_phone",
               "auth_mfa_web_authn",
-              "log_drain"
+              "log_drain",
+              "etl_pipeline"
             ]
           }
         },
