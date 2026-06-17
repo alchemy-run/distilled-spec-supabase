@@ -12795,7 +12795,6 @@
                   },
                   "code": {
                     "type": "string",
-                    "minLength": 1,
                     "description": "Specific region code. The codes supported are not a stable API, and should be retrieved from the /available-regions endpoint.",
                     "enum": [
                       "us-east-1",
@@ -12885,6 +12884,10 @@
             "type": "string",
             "format": "uri",
             "description": "Template URL used to create the project from the CLI."
+          },
+          "high_availability": {
+            "type": "boolean",
+            "description": "[Experimental] Whether to enable high availability for the project."
           }
         },
         "required": [
