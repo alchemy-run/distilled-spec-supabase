@@ -22837,6 +22837,7 @@
                         "integrations.github_connections",
                         "dedicated_pooler",
                         "observability.dashboard_advanced_metrics",
+                        "api.members.invitations",
                         "api.members.roles"
                       ]
                     },
