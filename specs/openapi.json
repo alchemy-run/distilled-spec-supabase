@@ -15110,6 +15110,7 @@
             "value"
           ]
         },
+        "maxItems": 100,
         "example": [
           {
             "name": "OPENAI_API_KEY",
