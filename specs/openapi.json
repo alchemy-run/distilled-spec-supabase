@@ -49,16 +49,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_read"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_read"
-            ]
           }
         ],
         "summary": "Get database branch config",
@@ -73,6 +63,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_read"
+          ],
+          [
+            "branching_production_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       },
@@ -133,16 +131,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_write"
-            ]
           }
         ],
         "summary": "Update database branch config",
@@ -157,6 +145,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_write"
+          ],
+          [
+            "branching_production_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       },
@@ -218,16 +214,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_delete"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_delete"
-            ]
           }
         ],
         "summary": "Delete a database branch",
@@ -242,6 +228,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_delete"
+          ],
+          [
+            "branching_production_delete"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -304,16 +298,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_write"
-            ]
           }
         ],
         "summary": "Pushes a database branch",
@@ -328,6 +312,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_write"
+          ],
+          [
+            "branching_production_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -390,16 +382,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_write"
-            ]
           }
         ],
         "summary": "Merges a database branch",
@@ -414,6 +396,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_write"
+          ],
+          [
+            "branching_production_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -476,16 +466,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_write"
-            ]
           }
         ],
         "summary": "Resets a database branch",
@@ -500,6 +480,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_write"
+          ],
+          [
+            "branching_production_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -552,16 +540,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_write"
-            ]
           }
         ],
         "summary": "Restore a scheduled branch deletion",
@@ -576,6 +554,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_write"
+          ],
+          [
+            "branching_production_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -647,16 +633,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_write"
-            ]
           }
         ],
         "summary": "[Beta] Diffs a database branch",
@@ -671,6 +647,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_write"
+          ],
+          [
+            "branching_production_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -707,11 +691,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "projects_read"
-            ]
           }
         ],
         "summary": "List all projects",
@@ -726,6 +705,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "projects_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       },
@@ -766,11 +750,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_projects_create"
-            ]
           }
         ],
         "summary": "Create a project",
@@ -786,6 +765,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_projects_create"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -922,11 +906,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organizations_read"
-            ]
           }
         ],
         "summary": "List all organizations",
@@ -941,6 +920,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organizations_read"
+          ]
         ],
         "x-oauth-scope": "organizations:read"
       },
@@ -984,11 +968,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organizations_create"
-            ]
           }
         ],
         "summary": "Create an organization",
@@ -998,6 +977,11 @@
         "x-endpoint-owners": [
           "management-api",
           "billing"
+        ],
+        "x-fga-permissions": [
+          [
+            "organizations_create"
+          ]
         ]
       }
     },
@@ -1123,13 +1107,6 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "read"
-            ]
-          }
-        ],
         "summary": "[Beta] Authorize user through oauth",
         "tags": [
           "OAuth"
@@ -1167,13 +1144,6 @@
             }
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "write"
-            ]
-          }
-        ],
         "summary": "[Beta] Exchange auth code for user's access and refresh token",
         "tags": [
           "OAuth"
@@ -1203,13 +1173,6 @@
             "description": ""
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "write"
-            ]
-          }
-        ],
         "summary": "[Beta] Revoke oauth app authorization and it's corresponding tokens",
         "tags": [
           "OAuth"
@@ -1330,12 +1293,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_write",
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Authorize user through oauth and claim a project",
@@ -1344,6 +1301,12 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_write",
+            "project_admin_write"
+          ]
         ]
       }
     },
@@ -1434,11 +1397,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "snippets_read"
-            ]
           }
         ],
         "summary": "Lists SQL snippets for the logged in user",
@@ -1453,6 +1411,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "snippets_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -1499,11 +1462,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "snippets_read"
-            ]
           }
         ],
         "summary": "Gets a specific SQL snippet",
@@ -1518,6 +1476,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "snippets_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -1618,11 +1581,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "action_runs_read"
-            ]
           }
         ],
         "summary": "List all action runs",
@@ -1637,6 +1595,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "action_runs_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       },
@@ -1688,11 +1651,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "action_runs_read"
-            ]
           }
         ],
         "summary": "Count the number of action runs",
@@ -1704,6 +1662,11 @@
             "name": "OAuth scope: environment:read",
             "position": "after"
           }
+        ],
+        "x-fga-permissions": [
+          [
+            "action_runs_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       }
@@ -1764,11 +1727,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "action_runs_read"
-            ]
           }
         ],
         "summary": "Get the status of an action run",
@@ -1783,6 +1741,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "action_runs_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       }
@@ -1853,11 +1816,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "action_runs_write"
-            ]
           }
         ],
         "summary": "Update the status of an action run",
@@ -1872,6 +1830,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "action_runs_write"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -1932,11 +1895,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "action_runs_read"
-            ]
           }
         ],
         "summary": "Get the logs of an action run",
@@ -1951,6 +1909,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "action_runs_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       }
@@ -2010,11 +1973,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_read"
-            ]
           }
         ],
         "summary": "Get project api keys",
@@ -2030,6 +1988,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_read"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       },
@@ -2094,11 +2057,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_write"
-            ]
           }
         ],
         "summary": "Creates a new API key for the project",
@@ -2114,6 +2072,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       }
@@ -2160,11 +2123,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_read"
-            ]
           }
         ],
         "summary": "Check whether JWT based legacy (anon, service_role) API keys are enabled. This API endpoint will be removed in the future, check for HTTP 404 Not Found.",
@@ -2180,6 +2138,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_read"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       },
@@ -2234,11 +2197,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_write"
-            ]
           }
         ],
         "summary": "Disable or re-enable JWT based legacy (anon, service_role) API keys. This API endpoint will be removed in the future, check for HTTP 404 Not Found.",
@@ -2254,6 +2212,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       }
@@ -2330,11 +2293,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_write"
-            ]
           }
         ],
         "summary": "Updates an API key for the project",
@@ -2350,6 +2308,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       },
@@ -2414,11 +2377,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_read"
-            ]
           }
         ],
         "summary": "Get API key",
@@ -2434,6 +2392,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_read"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       },
@@ -2517,11 +2480,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "api_gateway_keys_write"
-            ]
           }
         ],
         "summary": "Deletes an API key for the project",
@@ -2537,6 +2495,11 @@
         "x-endpoint-owners": [
           "auth",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "api_gateway_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       }
@@ -2581,16 +2544,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_read"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_read"
-            ]
           }
         ],
         "summary": "List all database branches",
@@ -2605,6 +2558,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_read"
+          ],
+          [
+            "branching_production_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       },
@@ -2654,16 +2615,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_create"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_create"
-            ]
           }
         ],
         "summary": "Create a database branch",
@@ -2678,6 +2629,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_create"
+          ],
+          [
+            "branching_production_create"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       },
@@ -2719,11 +2678,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_delete"
-            ]
           }
         ],
         "summary": "Disables preview branching",
@@ -2738,6 +2692,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_production_delete"
+          ]
         ],
         "x-oauth-scope": "environment:write"
       }
@@ -2788,16 +2747,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "branching_production_read"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "branching_development_read"
-            ]
           }
         ],
         "summary": "Get a database branch",
@@ -2812,6 +2761,14 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "branching_development_read"
+          ],
+          [
+            "branching_production_read"
+          ]
         ],
         "x-oauth-scope": "environment:read"
       }
@@ -2861,11 +2818,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "custom_domain_read"
-            ]
           }
         ],
         "summary": "[Beta] Gets project's custom hostname config",
@@ -2881,6 +2833,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "custom_domain_read"
+          ]
         ],
         "x-oauth-scope": "domains:read"
       },
@@ -2931,11 +2888,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "custom_domain_write"
-            ]
           }
         ],
         "summary": "[Beta] Deletes a project's custom hostname configuration",
@@ -2951,6 +2903,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "custom_domain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -3010,11 +2967,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "custom_domain_write"
-            ]
           }
         ],
         "summary": "[Beta] Updates project's custom hostname configuration",
@@ -3030,6 +2982,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "custom_domain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -3079,11 +3036,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "custom_domain_write"
-            ]
           }
         ],
         "summary": "[Beta] Attempts to verify the DNS configuration for project's custom hostname configuration",
@@ -3099,6 +3051,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "custom_domain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -3148,11 +3105,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "custom_domain_write"
-            ]
           }
         ],
         "summary": "[Beta] Activates a custom hostname for a project.",
@@ -3168,6 +3120,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "custom_domain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -3217,11 +3174,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read"
-            ]
           }
         ],
         "summary": "[Beta] Get project's temporary access configuration.",
@@ -3237,6 +3189,11 @@
         "x-endpoint-owners": [
           "security",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -3294,11 +3251,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "[Beta] Update project's temporary access configuration.",
@@ -3314,6 +3266,11 @@
         "x-endpoint-owners": [
           "security",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -3363,11 +3320,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_network_bans_read"
-            ]
           }
         ],
         "summary": "[Beta] Gets project's network bans",
@@ -3383,6 +3335,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_network_bans_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
@@ -3432,11 +3389,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_network_bans_read"
-            ]
           }
         ],
         "summary": "[Beta] Gets project's network bans with additional information about which databases they affect",
@@ -3452,6 +3404,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_network_bans_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
@@ -3504,11 +3461,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_network_bans_write"
-            ]
           }
         ],
         "summary": "[Beta] Remove network bans.",
@@ -3524,6 +3476,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_network_bans_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -3573,11 +3530,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_network_restrictions_read"
-            ]
           }
         ],
         "summary": "[Beta] Gets project's network restrictions",
@@ -3593,6 +3545,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_network_restrictions_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       },
@@ -3650,11 +3607,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_network_restrictions_write"
-            ]
           }
         ],
         "summary": "[Alpha] Updates project's network restrictions by adding or removing CIDRs",
@@ -3670,6 +3622,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_network_restrictions_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -3729,11 +3686,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_network_restrictions_write"
-            ]
           }
         ],
         "summary": "[Beta] Updates project's network restrictions",
@@ -3749,6 +3701,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_network_restrictions_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -3798,11 +3755,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "[Beta] Gets project's pgsodium config",
@@ -3817,6 +3769,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       },
@@ -3874,11 +3831,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "[Beta] Updates project's pgsodium config. Updating the root_key can cause all data encrypted with the older key to become inaccessible.",
@@ -3893,6 +3845,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       }
@@ -3942,11 +3899,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "data_api_config_read"
-            ]
           }
         ],
         "summary": "Gets project's postgrest config",
@@ -3962,6 +3914,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "data_api_config_read"
+          ]
         ],
         "x-oauth-scope": "rest:read"
       },
@@ -4019,11 +3976,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "data_api_config_write"
-            ]
           }
         ],
         "summary": "Updates project's postgrest config",
@@ -4039,6 +3991,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "data_api_config_write"
+          ]
         ],
         "x-oauth-scope": "rest:write"
       }
@@ -4088,11 +4045,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read"
-            ]
           }
         ],
         "summary": "Gets a specific project that belongs to the authenticated user",
@@ -4107,6 +4059,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       },
@@ -4151,11 +4108,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Deletes the given project",
@@ -4172,6 +4124,11 @@
           "management-api",
           "infra",
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       },
@@ -4229,11 +4186,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Updates the given project",
@@ -4248,6 +4200,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -4301,11 +4258,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_secrets_read"
-            ]
           }
         ],
         "summary": "List all secrets",
@@ -4320,6 +4272,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_secrets_read"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       },
@@ -4371,11 +4328,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_secrets_write"
-            ]
           }
         ],
         "summary": "Bulk create secrets",
@@ -4390,6 +4342,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_secrets_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       },
@@ -4441,11 +4398,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_secrets_write"
-            ]
           }
         ],
         "summary": "Bulk delete secrets",
@@ -4460,6 +4412,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_secrets_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       }
@@ -4509,11 +4466,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_ssl_config_read"
-            ]
           }
         ],
         "summary": "[Beta] Get project's SSL enforcement configuration.",
@@ -4529,6 +4481,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_ssl_config_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -4586,11 +4543,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_ssl_config_write"
-            ]
           }
         ],
         "summary": "[Beta] Update project's SSL enforcement configuration.",
@@ -4606,6 +4558,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_ssl_config_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -4666,11 +4623,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_read"
-            ]
           }
         ],
         "summary": "Generate TypeScript types",
@@ -4685,6 +4637,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -4744,11 +4701,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "vanity_subdomain_read"
-            ]
           }
         ],
         "summary": "[Beta] Gets current vanity subdomain config",
@@ -4773,6 +4725,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "vanity_subdomain_read"
+          ]
         ],
         "x-oauth-scope": "domains:read"
       },
@@ -4813,11 +4770,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "vanity_subdomain_write"
-            ]
           }
         ],
         "summary": "[Beta] Deletes a project's vanity subdomain configuration",
@@ -4833,6 +4785,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "vanity_subdomain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -4902,11 +4859,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "vanity_subdomain_write"
-            ]
           }
         ],
         "summary": "[Beta] Checks vanity subdomain availability",
@@ -4931,6 +4883,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "vanity_subdomain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -5000,11 +4957,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "vanity_subdomain_write"
-            ]
           }
         ],
         "summary": "[Beta] Activates a vanity subdomain for a project.",
@@ -5029,6 +4981,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "vanity_subdomain_write"
+          ]
         ],
         "x-oauth-scope": "domains:write"
       }
@@ -5088,12 +5045,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write",
-              "database_write"
-            ]
           }
         ],
         "summary": "[Beta] Upgrades the project's Postgres version",
@@ -5109,6 +5060,12 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write",
+            "database_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -5158,12 +5115,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read",
-              "database_read"
-            ]
           }
         ],
         "summary": "[Beta] Returns the project's eligibility for upgrades",
@@ -5179,6 +5130,12 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read",
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
@@ -5237,12 +5194,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read",
-              "database_read"
-            ]
           }
         ],
         "summary": "[Beta] Gets the latest status of the project's upgrade",
@@ -5258,6 +5209,12 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read",
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
@@ -5307,11 +5264,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_readonly_config_read"
-            ]
           }
         ],
         "summary": "Returns project's readonly mode status",
@@ -5328,6 +5280,11 @@
           "management-api",
           "infra",
           "support-tooling"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_readonly_config_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -5370,11 +5327,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_readonly_config_write"
-            ]
           }
         ],
         "summary": "Disables project's readonly mode for the next 15 minutes",
@@ -5391,6 +5343,11 @@
           "management-api",
           "infra",
           "support-tooling"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_readonly_config_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -5453,11 +5410,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_read_replicas_write"
-            ]
           }
         ],
         "summary": "[Beta] Set up a read replica",
@@ -5478,6 +5430,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_read_replicas_write"
+          ]
         ]
       }
     },
@@ -5529,11 +5486,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_read_replicas_write"
-            ]
           }
         ],
         "summary": "[Beta] Remove a read replica",
@@ -5543,6 +5495,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_read_replicas_write"
+          ]
         ]
       }
     },
@@ -5630,11 +5587,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read"
-            ]
           }
         ],
         "summary": "Gets project's service health status",
@@ -5650,6 +5602,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
@@ -5696,11 +5653,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_write"
-            ]
           }
         ],
         "summary": "Set up the project's existing JWT secret as an in_use JWT signing key. This endpoint will be removed in the future always check for HTTP 404 Not Found.",
@@ -5715,6 +5667,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       },
@@ -5759,11 +5716,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_read"
-            ]
           }
         ],
         "summary": "Get the signing key information for the JWT secret imported as signing key for this project. This endpoint will be removed in the future, check for HTTP 404 Not Found.",
@@ -5778,6 +5730,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_read"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       }
@@ -5834,11 +5791,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_write"
-            ]
           }
         ],
         "summary": "Create a new signing key for the project in standby status",
@@ -5853,6 +5805,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       },
@@ -5897,11 +5854,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_read"
-            ]
           }
         ],
         "summary": "List all signing keys for the project",
@@ -5916,6 +5868,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_read"
+          ]
         ],
         "x-oauth-scope": "secrets:read"
       }
@@ -5972,11 +5929,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_read"
-            ]
           }
         ],
         "summary": "Get information about a signing key",
@@ -5985,6 +5937,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_read"
+          ]
         ]
       },
       "delete": {
@@ -6038,11 +5995,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_write"
-            ]
           }
         ],
         "summary": "Remove a signing key from a project. Only possible if the key has been in revoked status for a while.",
@@ -6057,6 +6009,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       },
@@ -6121,11 +6078,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_signing_keys_write"
-            ]
           }
         ],
         "summary": "Update a signing key, mainly its status",
@@ -6140,6 +6092,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_signing_keys_write"
+          ]
         ],
         "x-oauth-scope": "secrets:write"
       }
@@ -6189,11 +6146,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_read"
-            ]
           }
         ],
         "summary": "Gets project's auth config",
@@ -6208,6 +6160,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_read"
+          ]
         ],
         "x-oauth-scope": "auth:read"
       },
@@ -6265,12 +6222,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_write",
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Updates a project's auth config",
@@ -6285,6 +6236,12 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_write",
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "auth:write"
       }
@@ -6341,11 +6298,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_write"
-            ]
           }
         ],
         "summary": "Creates a new third-party auth integration",
@@ -6360,6 +6312,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_write"
+          ]
         ],
         "x-oauth-scope": "auth:write"
       },
@@ -6407,11 +6364,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_read"
-            ]
           }
         ],
         "summary": "Lists all third-party auth integrations",
@@ -6426,6 +6378,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_read"
+          ]
         ],
         "x-oauth-scope": "auth:read"
       }
@@ -6482,11 +6439,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_write"
-            ]
           }
         ],
         "summary": "Removes a third-party auth integration",
@@ -6501,6 +6453,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_write"
+          ]
         ],
         "x-oauth-scope": "auth:write"
       },
@@ -6555,11 +6512,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_read"
-            ]
           }
         ],
         "summary": "Get a third-party integration",
@@ -6574,6 +6526,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_read"
+          ]
         ],
         "x-oauth-scope": "auth:read"
       }
@@ -6613,11 +6570,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Pauses the given project",
@@ -6633,6 +6585,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -6672,11 +6629,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Restarts the given project",
@@ -6692,6 +6644,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -6738,11 +6695,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read"
-            ]
           }
         ],
         "summary": "Lists available restore versions for the given project",
@@ -6758,6 +6710,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       },
@@ -6795,11 +6752,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Restores the given project",
@@ -6815,6 +6767,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -6854,11 +6811,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Cancels the given project restoration",
@@ -6874,6 +6826,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_write"
+          ]
         ],
         "x-oauth-scope": "projects:write"
       }
@@ -6924,11 +6881,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_add_ons_read"
-            ]
           }
         ],
         "summary": "List billing addons and compute instance selections",
@@ -6937,6 +6889,11 @@
         ],
         "x-endpoint-owners": [
           "billing"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_add_ons_read"
+          ]
         ]
       },
       "patch": {
@@ -6987,11 +6944,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_add_ons_write"
-            ]
           }
         ],
         "summary": "Apply or update billing addons, including compute instance size",
@@ -7000,6 +6952,11 @@
         ],
         "x-endpoint-owners": [
           "billing"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_add_ons_write"
+          ]
         ]
       }
     },
@@ -7095,11 +7052,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_add_ons_write"
-            ]
           }
         ],
         "summary": "Remove billing addons or revert compute instance sizing",
@@ -7108,6 +7060,11 @@
         ],
         "x-endpoint-owners": [
           "billing"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_add_ons_write"
+          ]
         ]
       }
     },
@@ -7153,11 +7110,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_read"
-            ]
           }
         ],
         "summary": "Gets project claim token",
@@ -7166,6 +7118,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "project_admin_read"
+          ]
         ],
         "x-internal": true
       },
@@ -7210,12 +7167,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_write",
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Creates project claim token",
@@ -7224,6 +7175,12 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_write",
+            "project_admin_write"
+          ]
         ],
         "x-internal": true
       },
@@ -7261,12 +7218,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_write",
-              "project_admin_write"
-            ]
           }
         ],
         "summary": "Revokes project claim token",
@@ -7275,6 +7226,12 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_write",
+            "project_admin_write"
+          ]
         ],
         "x-internal": true
       }
@@ -7323,11 +7280,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "advisors_read"
-            ]
           }
         ],
         "summary": "Gets project performance advisors.",
@@ -7342,6 +7294,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "advisors_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -7402,11 +7359,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "advisors_read"
-            ]
           }
         ],
         "summary": "Gets project security advisors.",
@@ -7421,6 +7373,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "advisors_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -7501,11 +7458,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "analytics_logs_read"
-            ]
           }
         ],
         "summary": "Gets project's logs",
@@ -7520,6 +7472,11 @@
         ],
         "x-endpoint-owners": [
           "analytics"
+        ],
+        "x-fga-permissions": [
+          [
+            "analytics_logs_read"
+          ]
         ],
         "x-oauth-scope": "analytics:read"
       }
@@ -7600,11 +7557,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "analytics_logs_read"
-            ]
           }
         ],
         "summary": "Gets all project's logs in a single log stream",
@@ -7619,6 +7571,11 @@
         ],
         "x-endpoint-owners": [
           "analytics"
+        ],
+        "x-fga-permissions": [
+          [
+            "analytics_logs_read"
+          ]
         ],
         "x-oauth-scope": "analytics:read"
       }
@@ -7686,11 +7643,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "analytics_usage_read"
-            ]
           }
         ],
         "summary": "Gets project's usage api counts",
@@ -7699,6 +7651,11 @@
         ],
         "x-endpoint-owners": [
           "analytics"
+        ],
+        "x-fga-permissions": [
+          [
+            "analytics_usage_read"
+          ]
         ]
       }
     },
@@ -7747,11 +7704,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "analytics_usage_read"
-            ]
           }
         ],
         "summary": "Gets project's usage api requests count",
@@ -7760,6 +7712,11 @@
         ],
         "x-endpoint-owners": [
           "analytics"
+        ],
+        "x-fga-permissions": [
+          [
+            "analytics_usage_read"
+          ]
         ]
       }
     },
@@ -7832,11 +7789,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "analytics_usage_read"
-            ]
           }
         ],
         "summary": "Gets a project's function combined statistics",
@@ -7845,6 +7797,11 @@
         ],
         "x-endpoint-owners": [
           "analytics"
+        ],
+        "x-fga-permissions": [
+          [
+            "analytics_usage_read"
+          ]
         ]
       }
     },
@@ -7899,11 +7856,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "analytics_logs_read"
-            ]
           }
         ],
         "summary": "Scrape a project's metrics",
@@ -7918,6 +7870,11 @@
         ],
         "x-endpoint-owners": [
           "analytics"
+        ],
+        "x-fga-permissions": [
+          [
+            "analytics_logs_read"
+          ]
         ],
         "x-oauth-scope": "analytics:read"
       }
@@ -7977,11 +7934,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_write"
-            ]
           }
         ],
         "summary": "[Beta] Create a login role for CLI with temporary password",
@@ -7996,6 +7948,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       },
@@ -8043,11 +8000,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_write"
-            ]
           }
         ],
         "summary": "[Beta] Delete existing login roles used by CLI",
@@ -8062,6 +8014,11 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -8112,11 +8069,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_migrations_read"
-            ]
           }
         ],
         "summary": "List applied migration versions",
@@ -8131,6 +8083,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_migrations_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -8191,11 +8148,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_migrations_write"
-            ]
           }
         ],
         "summary": "Apply a database migration",
@@ -8210,6 +8162,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_migrations_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       },
@@ -8270,11 +8227,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_migrations_write"
-            ]
           }
         ],
         "summary": "Upsert a database migration without applying",
@@ -8289,6 +8241,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_migrations_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       },
@@ -8341,11 +8298,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_migrations_write"
-            ]
           }
         ],
         "summary": "Rollback database migrations and remove them from history table",
@@ -8360,6 +8312,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_migrations_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -8420,11 +8377,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_migrations_read"
-            ]
           }
         ],
         "summary": "Fetch an existing entry from migration history",
@@ -8439,6 +8391,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_migrations_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -8500,11 +8457,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_migrations_write"
-            ]
           }
         ],
         "summary": "Patch an existing entry in migration history",
@@ -8519,6 +8471,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_migrations_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -8571,16 +8528,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_write"
-            ]
-          },
-          {
-            "fga_permissions": [
-              "database_read"
-            ]
           }
         ],
         "summary": "[Beta] Run sql query",
@@ -8595,6 +8542,14 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_read"
+          ],
+          [
+            "database_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -8648,11 +8603,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_read"
-            ]
           }
         ],
         "summary": "[Beta] Run a sql query as supabase_read_only_user",
@@ -8667,6 +8617,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -8709,11 +8664,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_webhooks_config_write"
-            ]
           }
         ],
         "summary": "[Beta] Enables Database Webhooks on the project",
@@ -8729,6 +8679,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_webhooks_config_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -8777,11 +8732,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_read"
-            ]
           }
         ],
         "summary": "Gets database metadata for the given project.",
@@ -8796,6 +8746,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
@@ -8855,11 +8810,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_config_write"
-            ]
           }
         ],
         "summary": "Updates the database password",
@@ -8875,6 +8825,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_config_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -8925,11 +8880,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_read"
-            ]
           }
         ],
         "summary": "Get user-id to role mappings for JIT access",
@@ -8944,6 +8894,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -9002,11 +8957,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_read"
-            ]
           }
         ],
         "summary": "Authorize user-id to role mappings for JIT access",
@@ -9021,6 +8971,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -9079,11 +9034,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_write"
-            ]
           }
         ],
         "summary": "Updates a user mapping for JIT access",
@@ -9092,6 +9042,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_write"
+          ]
         ]
       }
     },
@@ -9141,11 +9096,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_read"
-            ]
           }
         ],
         "summary": "List all user-id to role mappings for JIT access",
@@ -9154,6 +9104,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_write"
+          ]
         ]
       }
     },
@@ -9213,11 +9168,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_write"
-            ]
           }
         ],
         "summary": "Invites an external user to a database for JIT access",
@@ -9226,6 +9176,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_write"
+          ]
         ]
       }
     },
@@ -9336,11 +9291,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_write"
-            ]
           }
         ],
         "summary": "Deletes the invite for an external user to a database for JIT access",
@@ -9349,6 +9299,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_write"
+          ]
         ]
       }
     },
@@ -9401,11 +9356,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_jit_write"
-            ]
           }
         ],
         "summary": "Delete JIT access by user-id",
@@ -9414,6 +9364,11 @@
         ],
         "x-endpoint-owners": [
           "security"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_jit_write"
+          ]
         ]
       }
     },
@@ -9473,11 +9428,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_read"
-            ]
           }
         ],
         "summary": "Get PostgREST OpenAPI spec",
@@ -9492,6 +9442,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -9545,11 +9500,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_read"
-            ]
           }
         ],
         "summary": "List all functions",
@@ -9564,6 +9514,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_read"
+          ]
         ],
         "x-oauth-scope": "edge_functions:read"
       },
@@ -9698,11 +9653,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_write"
-            ]
           }
         ],
         "summary": "Create a function",
@@ -9717,6 +9667,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_write"
+          ]
         ],
         "x-oauth-scope": "edge_functions:write"
       },
@@ -9778,11 +9733,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_write"
-            ]
           }
         ],
         "summary": "Bulk update functions",
@@ -9797,6 +9747,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_write"
+          ]
         ],
         "x-oauth-scope": "edge_functions:write"
       }
@@ -9880,11 +9835,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_write"
-            ]
           }
         ],
         "summary": "Deploy a function",
@@ -9899,6 +9849,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_write"
+          ]
         ],
         "x-oauth-scope": "edge_functions:write"
       }
@@ -9960,11 +9915,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_read"
-            ]
           }
         ],
         "summary": "Retrieve a function",
@@ -9979,6 +9929,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_read"
+          ]
         ],
         "x-oauth-scope": "edge_functions:read"
       },
@@ -10120,11 +10075,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_write"
-            ]
           }
         ],
         "summary": "Update a function",
@@ -10139,6 +10089,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_write"
+          ]
         ],
         "x-oauth-scope": "edge_functions:write"
       },
@@ -10191,11 +10146,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_write"
-            ]
           }
         ],
         "summary": "Delete a function",
@@ -10210,6 +10160,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_write"
+          ]
         ],
         "x-oauth-scope": "edge_functions:write"
       }
@@ -10271,11 +10226,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "edge_functions_read"
-            ]
           }
         ],
         "summary": "Retrieve a function body",
@@ -10290,6 +10240,11 @@
         ],
         "x-endpoint-owners": [
           "functions"
+        ],
+        "x-fga-permissions": [
+          [
+            "edge_functions_read"
+          ]
         ],
         "x-oauth-scope": "edge_functions:read"
       }
@@ -10342,11 +10297,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "storage_read"
-            ]
           }
         ],
         "summary": "Lists all buckets",
@@ -10361,6 +10311,11 @@
         ],
         "x-endpoint-owners": [
           "storage"
+        ],
+        "x-fga-permissions": [
+          [
+            "storage_read"
+          ]
         ],
         "x-oauth-scope": "storage:read"
       }
@@ -10410,11 +10365,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_disk_config_read"
-            ]
           }
         ],
         "summary": "Get database disk attributes",
@@ -10424,6 +10374,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_disk_config_read"
+          ]
         ]
       },
       "post": {
@@ -10473,11 +10428,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_disk_config_write"
-            ]
           }
         ],
         "summary": "Modify database disk",
@@ -10487,6 +10437,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_disk_config_write"
+          ]
         ]
       }
     },
@@ -10535,11 +10490,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_disk_config_read"
-            ]
           }
         ],
         "summary": "Get disk utilization",
@@ -10549,6 +10499,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_disk_config_read"
+          ]
         ]
       }
     },
@@ -10597,11 +10552,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "infra_disk_config_read"
-            ]
           }
         ],
         "summary": "Gets project disk autoscale config",
@@ -10611,6 +10561,11 @@
         "x-endpoint-owners": [
           "management-api",
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "infra_disk_config_read"
+          ]
         ]
       }
     },
@@ -10659,11 +10614,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "storage_config_read"
-            ]
           }
         ],
         "summary": "Gets project's storage config",
@@ -10672,6 +10622,11 @@
         ],
         "x-endpoint-owners": [
           "storage"
+        ],
+        "x-fga-permissions": [
+          [
+            "storage_config_read"
+          ]
         ]
       },
       "patch": {
@@ -10721,11 +10676,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "storage_config_write"
-            ]
           }
         ],
         "summary": "Updates project's storage config",
@@ -10734,6 +10684,11 @@
         ],
         "x-endpoint-owners": [
           "storage"
+        ],
+        "x-fga-permissions": [
+          [
+            "storage_config_write"
+          ]
         ]
       }
     },
@@ -10779,13 +10734,6 @@
             "description": "Failed to retrieve project's pgbouncer config"
           }
         },
-        "security": [
-          {
-            "fga_permissions": [
-              "database_read"
-            ]
-          }
-        ],
         "summary": "Get project's pgbouncer config",
         "tags": [
           "Database"
@@ -10799,6 +10747,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -10851,11 +10804,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_pooling_config_read"
-            ]
           }
         ],
         "summary": "Gets project's supavisor config",
@@ -10870,6 +10818,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_pooling_config_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -10927,11 +10880,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_pooling_config_write"
-            ]
           }
         ],
         "summary": "Updates project's supavisor config",
@@ -10946,6 +10894,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_pooling_config_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -10995,11 +10948,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_config_read"
-            ]
           }
         ],
         "summary": "Gets project's Postgres config",
@@ -11015,6 +10963,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_config_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -11072,11 +11025,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "database_config_write"
-            ]
           }
         ],
         "summary": "Updates project's Postgres config",
@@ -11092,6 +11040,11 @@
         "x-endpoint-owners": [
           "infra",
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "database_config_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -11138,11 +11091,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "realtime_config_read"
-            ]
           }
         ],
         "summary": "Gets realtime configuration",
@@ -11151,6 +11099,11 @@
         ],
         "x-endpoint-owners": [
           "realtime"
+        ],
+        "x-fga-permissions": [
+          [
+            "realtime_config_read"
+          ]
         ]
       },
       "patch": {
@@ -11197,11 +11150,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "realtime_config_write"
-            ]
           }
         ],
         "summary": "Updates realtime configuration",
@@ -11210,6 +11158,11 @@
         ],
         "x-endpoint-owners": [
           "realtime"
+        ],
+        "x-fga-permissions": [
+          [
+            "realtime_config_write"
+          ]
         ]
       }
     },
@@ -11251,11 +11204,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "realtime_config_write"
-            ]
           }
         ],
         "summary": "Shutdowns realtime connections for a project",
@@ -11264,6 +11212,11 @@
         ],
         "x-endpoint-owners": [
           "realtime"
+        ],
+        "x-fga-permissions": [
+          [
+            "realtime_config_write"
+          ]
         ]
       }
     },
@@ -11322,11 +11275,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_write"
-            ]
           }
         ],
         "summary": "Creates a new SSO provider",
@@ -11341,6 +11289,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_write"
+          ]
         ],
         "x-oauth-scope": "auth:write"
       },
@@ -11388,11 +11341,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_read"
-            ]
           }
         ],
         "summary": "Lists all SSO providers",
@@ -11407,6 +11355,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_read"
+          ]
         ],
         "x-oauth-scope": "auth:read"
       }
@@ -11466,11 +11419,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_read"
-            ]
           }
         ],
         "summary": "Gets a SSO provider by its UUID",
@@ -11485,6 +11433,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_read"
+          ]
         ],
         "x-oauth-scope": "auth:read"
       },
@@ -11552,11 +11505,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_write"
-            ]
           }
         ],
         "summary": "Updates a SSO provider by its UUID",
@@ -11571,6 +11519,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_write"
+          ]
         ],
         "x-oauth-scope": "auth:write"
       },
@@ -11628,11 +11581,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "auth_config_write"
-            ]
           }
         ],
         "summary": "Removes a SSO provider by its UUID",
@@ -11647,6 +11595,11 @@
         ],
         "x-endpoint-owners": [
           "auth"
+        ],
+        "x-fga-permissions": [
+          [
+            "auth_config_write"
+          ]
         ],
         "x-oauth-scope": "auth:write"
       }
@@ -11696,11 +11649,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_read"
-            ]
           }
         ],
         "summary": "Lists all backups",
@@ -11715,6 +11663,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       }
@@ -11764,11 +11717,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_write"
-            ]
           }
         ],
         "summary": "Restores a PITR backup for a database",
@@ -11783,6 +11731,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -11839,11 +11792,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_write"
-            ]
           }
         ],
         "summary": "Initiates a creation of a restore point for a database",
@@ -11858,6 +11806,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_write"
+          ]
         ],
         "x-internal": true,
         "x-oauth-scope": "database:write"
@@ -11915,11 +11868,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_read"
-            ]
           }
         ],
         "summary": "Get restore points for project",
@@ -11934,6 +11882,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_read"
+          ]
         ],
         "x-internal": true,
         "x-oauth-scope": "database:read"
@@ -11984,11 +11937,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_write"
-            ]
           }
         ],
         "summary": "Restores a physical backup for a database",
@@ -12003,6 +11951,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_write"
+          ]
         ],
         "x-internal": true,
         "x-oauth-scope": "database:write"
@@ -12066,11 +12019,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_read"
-            ]
           }
         ],
         "summary": "Gets the backup schedule for a project",
@@ -12092,6 +12040,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_read"
+          ]
         ],
         "x-oauth-scope": "database:read"
       },
@@ -12166,11 +12119,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_write"
-            ]
           }
         ],
         "summary": "Updates the backup schedule time for a project",
@@ -12192,6 +12140,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_write"
+          ]
         ],
         "x-oauth-scope": "database:write"
       }
@@ -12241,11 +12194,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "backups_write"
-            ]
           }
         ],
         "summary": "Initiates an undo to a given restore point",
@@ -12260,6 +12208,11 @@
         ],
         "x-endpoint-owners": [
           "infra"
+        ],
+        "x-fga-permissions": [
+          [
+            "backups_write"
+          ]
         ],
         "x-internal": true,
         "x-oauth-scope": "database:write"
@@ -12306,11 +12259,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_read"
-            ]
           }
         ],
         "summary": "Get entitlements for an organization",
@@ -12325,6 +12273,11 @@
         ],
         "x-endpoint-owners": [
           "billing"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_read"
+          ]
         ],
         "x-oauth-scope": "organizations:read"
       }
@@ -12363,11 +12316,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "members_read"
-            ]
           }
         ],
         "summary": "List members of an organization",
@@ -12382,6 +12330,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "members_read"
+          ]
         ],
         "x-oauth-scope": "organizations:read"
       }
@@ -12426,11 +12379,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_read"
-            ]
           }
         ],
         "summary": "Gets information about the organization",
@@ -12445,6 +12393,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_read"
+          ]
         ],
         "x-oauth-scope": "organizations:read"
       }
@@ -12498,11 +12451,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_write"
-            ]
           }
         ],
         "summary": "Gets project details for the specified organization and claim token",
@@ -12511,6 +12459,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_write"
+          ]
         ],
         "x-internal": true
       },
@@ -12555,11 +12508,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_admin_write"
-            ]
           }
         ],
         "summary": "Claims project for the specified organization",
@@ -12568,6 +12516,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_admin_write"
+          ]
         ],
         "x-internal": true
       }
@@ -12678,11 +12631,6 @@
         "security": [
           {
             "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organization_projects_read"
-            ]
           }
         ],
         "summary": "Gets all projects for the given organization",
@@ -12697,6 +12645,11 @@
         ],
         "x-endpoint-owners": [
           "management-api"
+        ],
+        "x-fga-permissions": [
+          [
+            "organization_projects_read"
+          ]
         ],
         "x-oauth-scope": "projects:read"
       }
