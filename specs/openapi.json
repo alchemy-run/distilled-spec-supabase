@@ -1527,6 +1527,73 @@
       }
     },
     "/v1/projects/{ref}/actions": {
+      "head": {
+        "description": "Returns the total number of action runs of the specified project.",
+        "operationId": "v1-count-action-runs",
+        "parameters": [
+          {
+            "name": "ref",
+            "required": true,
+            "in": "path",
+            "description": "Project ref",
+            "schema": {
+              "minLength": 20,
+              "maxLength": 20,
+              "pattern": "^[a-z]+$",
+              "example": "abcdefghijklmnopqrst",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "headers": {
+              "X-Total-Count": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64",
+                  "minimum": 0
+                },
+                "description": "total count value"
+              }
+            },
+            "description": ""
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden action"
+          },
+          "429": {
+            "description": "Rate limit exceeded"
+          },
+          "500": {
+            "description": "Failed to count action runs"
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Count the number of action runs",
+        "tags": [
+          "Environments"
+        ],
+        "x-badges": [
+          {
+            "name": "OAuth scope: environment:read",
+            "position": "after"
+          }
+        ],
+        "x-fga-permissions": [
+          [
+            "action_runs_read"
+          ]
+        ],
+        "x-oauth-scope": "environment:read"
+      },
       "get": {
         "description": "Returns a paginated list of action runs of the specified project.",
         "operationId": "v1-list-action-runs",
@@ -1606,73 +1673,6 @@
         ],
         "x-endpoint-owners": [
           "dev-workflows"
-        ],
-        "x-fga-permissions": [
-          [
-            "action_runs_read"
-          ]
-        ],
-        "x-oauth-scope": "environment:read"
-      },
-      "head": {
-        "description": "Returns the total number of action runs of the specified project.",
-        "operationId": "v1-count-action-runs",
-        "parameters": [
-          {
-            "name": "ref",
-            "required": true,
-            "in": "path",
-            "description": "Project ref",
-            "schema": {
-              "minLength": 20,
-              "maxLength": 20,
-              "pattern": "^[a-z]+$",
-              "example": "abcdefghijklmnopqrst",
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "headers": {
-              "X-Total-Count": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64",
-                  "minimum": 0
-                },
-                "description": "total count value"
-              }
-            },
-            "description": ""
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden action"
-          },
-          "429": {
-            "description": "Rate limit exceeded"
-          },
-          "500": {
-            "description": "Failed to count action runs"
-          }
-        },
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Count the number of action runs",
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
         ],
         "x-fga-permissions": [
           [
@@ -8153,7 +8153,6 @@
     },
     "/v1/projects/{ref}/database/migrations": {
       "get": {
-        "description": "Only available to selected partner OAuth apps",
         "operationId": "v1-list-migration-history",
         "parameters": [
           {
@@ -8220,7 +8219,6 @@
         "x-oauth-scope": "database:read"
       },
       "post": {
-        "description": "Only available to selected partner OAuth apps",
         "operationId": "v1-apply-a-migration",
         "parameters": [
           {
@@ -8299,7 +8297,6 @@
         "x-oauth-scope": "database:write"
       },
       "put": {
-        "description": "Only available to selected partner OAuth apps",
         "operationId": "v1-upsert-a-migration",
         "parameters": [
           {
@@ -8378,7 +8375,6 @@
         "x-oauth-scope": "database:write"
       },
       "delete": {
-        "description": "Only available to selected partner OAuth apps",
         "operationId": "v1-rollback-migrations",
         "parameters": [
           {
@@ -8451,7 +8447,6 @@
     },
     "/v1/projects/{ref}/database/migrations/{version}": {
       "get": {
-        "description": "Only available to selected partner OAuth apps",
         "operationId": "v1-get-a-migration",
         "parameters": [
           {
@@ -8528,7 +8523,6 @@
         "x-oauth-scope": "database:read"
       },
       "patch": {
-        "description": "Only available to selected partner OAuth apps",
         "operationId": "v1-patch-a-migration",
         "parameters": [
           {
