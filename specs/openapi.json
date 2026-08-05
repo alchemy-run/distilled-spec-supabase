@@ -13559,7 +13559,6 @@
                       "type": "string",
                       "enum": [
                         "AWS",
-                        "FLY",
                         "AWS_K8S",
                         "AWS_NIMBUS"
                       ]
@@ -13660,7 +13659,6 @@
                       "type": "string",
                       "enum": [
                         "AWS",
-                        "FLY",
                         "AWS_K8S",
                         "AWS_NIMBUS"
                       ]
