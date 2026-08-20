@@ -23336,6 +23336,7 @@
                         "project_restore_after_expiry",
                         "assistant.advance_model",
                         "integrations.github_connections",
+                        "integrations.github_push_webhooks_limit",
                         "dedicated_pooler",
                         "observability.dashboard_advanced_metrics",
                         "api.members.invitations",
